@@ -4,6 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Tags -->
+    <!-- TODO add image to meta tags -->
+    <!-- Primary Meta Tags -->
+    <title>Rupert's Dashboard</title>
+    <meta name="title" content="Rupert's Dashboard" />
+    <meta
+      name="description"
+      content="An AJAX dashboard pulling information from several APIs"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ruperts-ajax-dashboard.netlify.app/"
+    />
+    <meta property="og:title" content="Rupert's Dashboard" />
+    <meta
+      property="og:description"
+      content="An AJAX dashboard pulling information from several APIs"
+    />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://ruperts-ajax-dashboard.netlify.app/"
+    />
+    <meta property="twitter:title" content="Rupert's Dashboard" />
+    <meta
+      property="twitter:description"
+      content="An AJAX dashboard pulling information from several APIs"
+    />
+    <meta property="twitter:image" content="" />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon-precomposed"
@@ -108,7 +143,65 @@
 
     <!-- JS links -->
     <script src="/scripts/main.js" type="module"></script>
-    <title>Rupert's Dashboard</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <h1>The Essential Dashboard</h1>
+      </nav>
+    </header>
+    <main>
+      <div class="container main-grid">
+        <div id="card-container">
+          <div class="row">
+            <div class="col">
+              <div class="card shadow-sm p-3 mb-5 bg-body rounded">
+                <div id="date-time" class="full-width card-body">
+                  <time datetime="" role="timer">
+                    <span id="date" class="date"></span>
+                    <span id="time" class="time"></span>
+                  </time>
+                </div>
+              </div>
+              <div class="card shadow-sm p-3 mb-5 bg-body rounded" id="weather">
+                <div class="card-img-top" id="weather-image"></div>
+                <div class="card-body">
+                  <h2 class="card-title">Today's Weather</h2>
+                  <div id="weather-display"></div>
+                  <!-- <a href="#" class="btn btn-primary">Reload</a> -->
+                </div>
+              </div>
+              <div class="card shadow-sm p-3 mb-5 bg-body rounded" id="joke">
+                <h2>Joke</h2>
+                <div id="joke-display"></div>
+                <div class="button-row">
+                  <button
+                    id="safe-joke-button"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    New Safe Joke
+                  </button>
+                  <button
+                    id="rude-joke-button"
+                    type="button"
+                    class="btn btn-danger"
+                  >
+                    Possible Rude Joke
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div id="news"></div>
+              <div
+                class="card shadow-sm p-3 mb-5 bg-body rounded"
+                id="nasa"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

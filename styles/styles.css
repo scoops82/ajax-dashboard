@@ -1,0 +1,57 @@
+body {
+  text-align: center;
+}
+
+.date,
+.time {
+  display: block;
+}
+
+.date {
+  font-size: 3rem;
+}
+
+.time {
+  font-size: 2rem;
+}
+
+#card-container {
+  width: 100%;
+
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .card {
+  width: 25em;
+} */
+
+/* #news {
+  max-width: 50%;
+} */
+
+.accordion-body {
+  display: flex;
+}
+
+.accordion-body img {
+  max-width: 75%;
+}
+
+.accordion-button {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 0.5em 1.5em;
+}
+
+#nasa {
+  margin-top: 1.5em;
+}
